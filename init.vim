@@ -46,6 +46,7 @@ Plug 'mihaifm/bufstop'
 Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'honza/vim-snippets'
+Plug 'voldikss/vim-floaterm'
 
 if (has("nvim"))
     Plug 'nvim-lua/plenary.nvim'
@@ -370,3 +371,8 @@ function! HighlightWordUnderCursor()
 endfunction
 
 autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
+
+let g:floaterm_keymap_new = '<Leader>ft'
+let g:floaterm_keymap_kill = '<Leader>fk'
+let g:floaterm_keymap_hide = '<Leader>fh'
+let g:floaterm_keymap_show = '<Leader>fs'

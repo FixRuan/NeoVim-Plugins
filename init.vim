@@ -40,6 +40,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'dense-analysis/ale'
 call plug#end()
 
 let g:javascript_plugin_jsdoc = 1
@@ -83,9 +84,23 @@ let g:airline_section_x=''
 " remove separators for empty sections
 let g:airline_skip_empty_sections = 1
 
+" ALE """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ale_linters = {
+\}
+
+let g:ale_fixers = {
+\   '*': ['trim_whitespace'],
+\}
+
+let g:ale_fix_on_save = 1
+
 " Remaps """"""""""
 nmap <C-a> :NERDTreeToggle<CR>
 nmap <C-s> :w<CR>
+nmap <C-q> :bd<CR>
+
+nnoremap <c-z> :u<CR>
+inoremap <c-z> <c-o>:u<CR>
 
 " Shortcuts for split navigation
 map <C-h> <C-w>h

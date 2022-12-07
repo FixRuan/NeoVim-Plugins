@@ -27,6 +27,7 @@ filetype on          " Detect and set the filetype option and trigger the FileTy
 filetype plugin on   " Load the plugin file for the file type, if any
 filetype indent on   " Load the indent file for the file type, if any
 
+let mapleader = "/"
 set wrap
 
 call plug#begin()
@@ -104,6 +105,9 @@ let g:ale_linters = {
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['eslint'],
+\   'typescript': ['eslint'],
+\   'typescriptreact': ['eslint'],
+\   'javascriptreact': ['eslint'],
 \}
 
 let g:ale_fix_on_save = 1
@@ -376,3 +380,6 @@ let g:floaterm_keymap_new = '<Leader>ft'
 let g:floaterm_keymap_kill = '<Leader>fk'
 let g:floaterm_keymap_hide = '<Leader>fh'
 let g:floaterm_keymap_show = '<Leader>fs'
+
+let g:floaterm_keymap_prev   = '<Leader>f,'
+let g:floaterm_keymap_next   = '<Leader>f.'

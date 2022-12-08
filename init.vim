@@ -97,7 +97,6 @@ let g:airline_section_x=''
 let g:airline_skip_empty_sections = 1
 let g:NERDTreeWinPos = "right"
 
-" ALE """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_linters = {
 \}
 
@@ -115,12 +114,10 @@ let g:BufstopSpeedKeys = ["<F1>", "<F2>", "<F3>", "<F4>", "<F5>", "<F6>"]
 let g:BufstopLeader = ""
 let g:BufstopAutoSpeedToggle = 1
 
-" Remaps """"""""""
 nmap <C-a> :silent! NERDTreeToggle<CR>
 nmap <C-s> :w<CR>
 nmap <C-q> :bd<CR>
 
-" Adding an empty line below, above and below with insert
 nmap op o<Esc>k
 nmap oi O<Esc>j
 nmap oo A<CR>
@@ -133,11 +130,6 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-
-" autocmd """"""""""
-" autocmds aqui
-
-
 
 let g:coc_global_extensions = ['coc-snippets', 'coc-explorer']
 

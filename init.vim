@@ -1,30 +1,30 @@
-syntax on        
-set nu               
-set tabstop=2       
-set softtabstop=2   
-set shiftwidth=2  
-set expandtab        
-set smarttab        
-set smartindent      
-set hidden          
-set incsearch       
-set ignorecase     
-set smartcase       
-set scrolloff=8      
-set colorcolumn=100  
-set signcolumn=yes   
-set cmdheight=2      
-set updatetime=100  
-set encoding=utf-8   
-set nobackup        
-set nowritebackup    
-set splitright       
-set splitbelow       
-set autoread         
-set mouse=a          
-filetype on          
-filetype plugin on   
-filetype indent on   
+syntax on
+set nu
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+set smarttab
+set smartindent
+set hidden
+set incsearch
+set ignorecase
+set smartcase
+set scrolloff=8
+set colorcolumn=100
+set signcolumn=yes
+set cmdheight=2
+set updatetime=100
+set encoding=utf-8
+set nobackup
+set nowritebackup
+set splitright
+set splitbelow
+set autoread
+set mouse=a
+filetype on
+filetype plugin on
+filetype indent on
 
 let mapleader = "/"
 set wrap
@@ -47,6 +47,7 @@ Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'honza/vim-snippets'
 Plug 'voldikss/vim-floaterm'
+Plug 'nvim-lua/completion-nvim'
 
 if (has("nvim"))
     Plug 'nvim-lua/plenary.nvim'
@@ -55,7 +56,6 @@ endif
 
 call plug#end()
 
-let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
 
@@ -78,7 +78,7 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-if (has("nvim")) "Transparent background. Only for nvim
+if (has("nvim"))
     highlight Normal guibg=NONE ctermbg=NONE
     highlight EndOfBuffer guibg=NONE ctermbg=NONE
 endif
@@ -91,9 +91,7 @@ let g:airline_theme = 'everforest'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
-" remove the filetype part
 let g:airline_section_x=''
-" remove separators for empty sections
 let g:airline_skip_empty_sections = 1
 let g:NERDTreeWinPos = "right"
 
@@ -125,7 +123,6 @@ nmap oo A<CR>
 nnoremap <c-z> :u<CR>
 inoremap <c-z> <c-o>:u<CR>
 
-" Shortcuts for split navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
@@ -136,7 +133,9 @@ let g:coc_global_extensions = ['coc-snippets', 'coc-explorer']
 set encoding=utf-8
 set nobackup
 set nowritebackup
+
 set updatetime=300
+
 set signcolumn=yes
 
 inoremap <silent><expr> <TAB>
@@ -222,9 +221,7 @@ if has('nvim-0.4.0') || has('patch-8.2.0750')
 endif
 
 command! -nargs=0 Format :call CocActionAsync('format')
-
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
-
 command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
 
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
@@ -237,7 +234,6 @@ nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
 nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-
 :nnoremap <space>e :CocCommand explorer<CR>
 
 let g:coc_explorer_global_presets = {
@@ -313,5 +309,5 @@ let g:floaterm_keymap_kill = '<Leader>fk'
 let g:floaterm_keymap_hide = '<Leader>fh'
 let g:floaterm_keymap_show = '<Leader>fs'
 
-let g:floaterm_keymap_prev   = '<Leader>f,'
-let g:floaterm_keymap_next   = '<Leader>f.'
+let g:floaterm_keymap_prev   = '<Leader>,'
+let g:floaterm_keymap_next   = '<Leader>.'

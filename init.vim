@@ -58,7 +58,6 @@ call plug#end()
 
 let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
-
 let g:javascript_conceal_function             = "ƒ"
 let g:javascript_conceal_null                 = "ø"
 let g:javascript_conceal_this                 = "@"
@@ -86,11 +85,9 @@ endif
 let g:everforest_background = 'hard'
 let g:everforest_better_performance = 1
 colorscheme everforest
-
 let g:airline_theme = 'everforest'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-
 let g:airline_section_x=''
 let g:airline_skip_empty_sections = 1
 let g:NERDTreeWinPos = "right"
@@ -107,7 +104,6 @@ let g:ale_fixers = {
 \}
 
 let g:ale_fix_on_save = 1
-
 let g:BufstopSpeedKeys = ["<F1>", "<F2>", "<F3>", "<F4>", "<F5>", "<F6>"]
 let g:BufstopLeader = ""
 let g:BufstopAutoSpeedToggle = 1
@@ -115,7 +111,6 @@ let g:BufstopAutoSpeedToggle = 1
 nmap <C-a> :silent! NERDTreeToggle<CR>
 nmap <C-s> :w<CR>
 nmap <C-q> :bd<CR>
-
 nmap op o<Esc>k
 nmap oi O<Esc>j
 nmap oo A<CR>
@@ -129,13 +124,11 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 let g:coc_global_extensions = ['coc-snippets', 'coc-explorer']
-
 set encoding=utf-8
 set nobackup
 set nowritebackup
 
-set updatetime=300
-
+set updatetime=600
 set signcolumn=yes
 
 inoremap <silent><expr> <TAB>

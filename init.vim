@@ -48,7 +48,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'honza/vim-snippets'
 Plug 'voldikss/vim-floaterm'
 Plug 'nvim-lua/completion-nvim'
-Plugin 'https://github.com/kezhenxu94/vim-mysql-plugin.git'
+Plug 'https://github.com/kezhenxu94/vim-mysql-plugin.git'
 
 if (has("nvim"))
     Plug 'nvim-lua/plenary.nvim'

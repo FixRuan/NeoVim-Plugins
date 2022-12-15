@@ -48,7 +48,9 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'honza/vim-snippets'
 Plug 'voldikss/vim-floaterm'
 Plug 'nvim-lua/completion-nvim'
-Plug 'https://github.com/kezhenxu94/vim-mysql-plugin.git'
+Plug 'pantharshit00/vim-prisma'
+Plug 'dinhhuy258/vim-database', {'branch': 'master', 'do': ':UpdateRemotePlugins'}
+Plug 'vimsence/vimsence'
 
 if (has("nvim"))
     Plug 'nvim-lua/plenary.nvim'
@@ -59,6 +61,7 @@ call plug#end()
 
 let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
+
 let g:javascript_conceal_function             = "ƒ"
 let g:javascript_conceal_null                 = "ø"
 let g:javascript_conceal_this                 = "@"
@@ -71,6 +74,27 @@ let g:javascript_conceal_super                = "Ω"
 let g:javascript_conceal_arrow_function       = "⇒"
 let g:javascript_conceal_noarg_arrow_function = "🞅"
 let g:javascript_conceal_underscore_arrow_function = "🞅"
+
+" General options
+let g:presence_auto_update         = 1
+let g:presence_neovim_image_text   = "The One True Text Editor"
+let g:presence_main_image          = "neovim"
+let g:presence_client_id           = "793271441293967371"
+let g:presence_debounce_timeout    = 10
+let g:presence_enable_line_number  = 0
+let g:presence_blacklist           = []
+let g:presence_buttons             = 1
+let g:presence_file_assets         = {}
+let g:presence_show_time           = 1
+
+" Rich Presence text options
+let g:presence_editing_text        = "Editing %s"
+let g:presence_file_explorer_text  = "Browsing %s"
+let g:presence_git_commit_text     = "Committing changes"
+let g:presence_plugin_manager_text = "Managing plugins"
+let g:presence_reading_text        = "Reading %s"
+let g:presence_workspace_text      = "Working on %s"
+let g:presence_line_number_text    = "Line %s out of %s"
 
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -86,9 +110,11 @@ endif
 let g:everforest_background = 'hard'
 let g:everforest_better_performance = 1
 colorscheme everforest
+
 let g:airline_theme = 'everforest'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+
 let g:airline_section_x=''
 let g:airline_skip_empty_sections = 1
 let g:NERDTreeWinPos = "right"
@@ -105,6 +131,7 @@ let g:ale_fixers = {
 \}
 
 let g:ale_fix_on_save = 1
+
 let g:BufstopSpeedKeys = ["<F1>", "<F2>", "<F3>", "<F4>", "<F5>", "<F6>"]
 let g:BufstopLeader = ""
 let g:BufstopAutoSpeedToggle = 1
@@ -112,6 +139,7 @@ let g:BufstopAutoSpeedToggle = 1
 nmap <C-a> :silent! NERDTreeToggle<CR>
 nmap <C-s> :w<CR>
 nmap <C-q> :bd<CR>
+
 nmap op o<Esc>k
 nmap oi O<Esc>j
 nmap oo A<CR>
@@ -125,11 +153,13 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 let g:coc_global_extensions = ['coc-snippets', 'coc-explorer']
+
 set encoding=utf-8
 set nobackup
 set nowritebackup
 
-set updatetime=600
+set updatetime=300
+
 set signcolumn=yes
 
 inoremap <silent><expr> <TAB>

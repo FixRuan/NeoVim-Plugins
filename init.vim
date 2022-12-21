@@ -102,16 +102,11 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-if (has("nvim"))
-    highlight Normal guibg=NONE ctermbg=NONE
-    highlight EndOfBuffer guibg=NONE ctermbg=NONE
-endif
-
 let g:everforest_background = 'hard'
 let g:everforest_better_performance = 1
 colorscheme everforest
 
-let g:airline_theme = 'everforest'
+let g:airline_theme = 'supernova'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
@@ -158,7 +153,7 @@ set encoding=utf-8
 set nobackup
 set nowritebackup
 
-set updatetime=300
+set updatetime=400
 
 set signcolumn=yes
 
@@ -330,7 +325,7 @@ autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
 
 let g:floaterm_keymap_new = '<Leader>ft'
 let g:floaterm_keymap_kill = '<Leader>fk'
-let g:floaterm_keymap_hide = '<Leader>fh'
+let g:floaterm_keymap_hide = '<Leader>;'
 let g:floaterm_keymap_show = '<Leader>fs'
 
 let g:floaterm_keymap_prev   = '<Leader>,'

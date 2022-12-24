@@ -321,7 +321,7 @@ function! HighlightWordUnderCursor()
     endif
 endfunction
 
-autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
+"autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
 
 let g:floaterm_keymap_new = '<Leader>ft'
 let g:floaterm_keymap_kill = '<Leader>fk'

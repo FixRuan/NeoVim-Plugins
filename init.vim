@@ -51,6 +51,7 @@ Plug 'nvim-lua/completion-nvim'
 Plug 'pantharshit00/vim-prisma'
 Plug 'dinhhuy258/vim-database', {'branch': 'master', 'do': ':UpdateRemotePlugins'}
 Plug 'vimsence/vimsence'
+Plug 'tpope/vim-commentary'
 
 if (has("nvim"))
     Plug 'nvim-lua/plenary.nvim'
@@ -330,3 +331,6 @@ let g:floaterm_keymap_show = '<Leader>fs'
 
 let g:floaterm_keymap_prev   = '<Leader>,'
 let g:floaterm_keymap_next   = '<Leader>.'
+
+nmap <F8> :TagbarToggle<CR>
+:let g:NERDTreeWinSize=40

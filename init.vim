@@ -4,15 +4,13 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
-set smarttab
 set smartindent
 set hidden
+set smarttab
 set incsearch
 set ignorecase
 set smartcase
 set scrolloff=8
-set colorcolumn=100
-set signcolumn=yes
 set cmdheight=2
 set updatetime=100
 set encoding=utf-8
@@ -20,6 +18,7 @@ set nobackup
 set nowritebackup
 set splitright
 set splitbelow
+set wrap
 set autoread
 set mouse=a
 filetype on
@@ -27,11 +26,10 @@ filetype plugin on
 filetype indent on
 
 let mapleader = "/"
-set wrap
 
 call plug#begin()
-Plug 'sainnhe/everforest'
 Plug 'pangloss/vim-javascript'
+Plug 'prisma/vim-prisma'
 Plug 'mxw/vim-jsx'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -48,7 +46,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'honza/vim-snippets'
 Plug 'voldikss/vim-floaterm'
 Plug 'nvim-lua/completion-nvim'
-Plug 'pantharshit00/vim-prisma'
 Plug 'dinhhuy258/vim-database', {'branch': 'master', 'do': ':UpdateRemotePlugins'}
 Plug 'vimsence/vimsence'
 Plug 'tpope/vim-commentary'
@@ -103,11 +100,7 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-let g:everforest_background = 'hard'
-let g:everforest_better_performance = 1
-colorscheme everforest
-
-let g:airline_theme = 'supernova'
+let g:airline_theme = 'transparent'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
@@ -155,8 +148,6 @@ set nobackup
 set nowritebackup
 
 set updatetime=400
-
-set signcolumn=yes
 
 inoremap <silent><expr> <TAB>
       \ coc#pum#visible() ? coc#pum#next(1) :
@@ -322,6 +313,7 @@ function! HighlightWordUnderCursor()
     endif
 endfunction
 
+
 "autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
 
 let g:floaterm_keymap_new = '<Leader>ft'
@@ -333,4 +325,3 @@ let g:floaterm_keymap_prev   = '<Leader>,'
 let g:floaterm_keymap_next   = '<Leader>.'
 
 nmap <F8> :TagbarToggle<CR>
-:let g:NERDTreeWinSize=40
